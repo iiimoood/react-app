@@ -19,6 +19,10 @@
 
 .list a {
   text-decoration: none;
-  color: $color-light;
   margin-right: 10px;
+  font-weight: 600;
+}
+
+.linkActive {
+  color: $color-warning;
 }

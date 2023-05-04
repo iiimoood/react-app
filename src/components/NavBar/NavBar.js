@@ -1,5 +1,6 @@
 import Container from '../Container/Container';
 import styles from './NavBar.module.scss';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -10,13 +11,34 @@ const NavBar = () => {
         </span>
         <ul className={styles.list}>
           <li>
-            <a href="http://localhost:3000/">Home</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? styles.linkActive : undefined
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href="http://localhost:3000/favorite">Favorite</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? styles.linkActive : undefined
+              }
+              to="/favorite"
+            >
+              Favorite
+            </NavLink>
           </li>
           <li>
-            <a href="http://localhost:3000/about">About</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? styles.linkActive : undefined
+              }
+              to="/about"
+            >
+              About
+            </NavLink>
           </li>
         </ul>
       </Container>

@@ -2,7 +2,10 @@ import styles from './SearchForm.module.scss';
 import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
-import { updateSearchString, getSearchString } from '../../redux/store';
+import {
+  updateSearchString,
+  getSearchString,
+} from '../../redux/searchStringReducerRedux';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 

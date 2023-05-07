@@ -7,12 +7,12 @@ const UPDATE_SEARCHSTRING = createActionName('UPDATE_SEARCHSTRING');
 
 // action creators
 export const updateSearchString = (payload) => ({
-  type: { UPDATE_SEARCHSTRING },
+  type: UPDATE_SEARCHSTRING,
   payload,
 });
 const searchStringReducer = (statePart = '', action) => {
   switch (action.type) {
-    case 'UPDATE_SEARCHSTRING':
+    case UPDATE_SEARCHSTRING:
       return action.payload;
     default:
       return statePart;
